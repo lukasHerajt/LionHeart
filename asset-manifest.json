@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/LionHeart-gh-pages/static/css/main.073c9b0a.css",
+    "main.js": "/LionHeart-gh-pages/static/js/main.c49a6886.js",
+    "static/js/787.f3a8d0d8.chunk.js": "/LionHeart-gh-pages/static/js/787.f3a8d0d8.chunk.js",
+    "static/media/logo.svg": "/LionHeart-gh-pages/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/LionHeart-gh-pages/index.html",
+    "main.073c9b0a.css.map": "/LionHeart-gh-pages/static/css/main.073c9b0a.css.map",
+    "main.c49a6886.js.map": "/LionHeart-gh-pages/static/js/main.c49a6886.js.map",
+    "787.f3a8d0d8.chunk.js.map": "/LionHeart-gh-pages/static/js/787.f3a8d0d8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.c49a6886.js"
+  ]
+}
