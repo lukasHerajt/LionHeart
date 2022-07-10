@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext");
+
+.Logo {
+  background-image: url(./logo.png);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  background-color: #a7b5f9 !important;
+}
+.body {
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form {
+  display: grid;
+  gap: 10px;
+}
+
+.f1 {
+  /* Already have an account? Log In */
+  line-height: 3;
+  text-align: center;
+
+  color: #334e68;
+  color: #334e68;
+}

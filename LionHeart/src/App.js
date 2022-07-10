@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+// import react from "react";
+import { useState } from "react";
+// import { ReactDOM } from "react";
+import StartScreen from "./startScreen";
+import AppOnboarding from "./AppOnboarding";
+import AppOB2 from "./AppOB2";
 
 function App() {
+  const [screenSubmitted, setScreenSubmitted] = useState("");
+
+  console.log(screenSubmitted);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {screenSubmitted === "" && (
+        <StartScreen userSubmitted={setScreenSubmitted} />
+      )}
+      {screenSubmitted === "apprentice" && <AppOnboarding />}
+      {screenSubmitted === "app-onboarding" && <AppOB2 />}
+    </>
   );
 }
 
