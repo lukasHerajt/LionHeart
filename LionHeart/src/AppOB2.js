@@ -9,7 +9,7 @@ import logo from "./logo.png";
 const styles = {
   root: {
     "& .MuiOutlinedInput-input": {
-      padding: "16.5px 14px",
+      padding: "14px 31px",
     },
     "& .MuiSvgIcon-colorPrimary": {
       fill: "#A7B5F9",
@@ -27,7 +27,7 @@ function AppOB2({ classes }) {
     <div className={classes.root}>
       <img className="Logo" src={logo} alt="Logo" />
       <div className="body">
-        <header className="header">
+        <header className="appsub-header">
           <h2>Personal Information</h2>
         </header>
         <div className="form">

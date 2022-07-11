@@ -14,8 +14,12 @@ function App() {
       {screenSubmitted === "" && (
         <StartScreen userSubmitted={setScreenSubmitted} />
       )}
-      {screenSubmitted === "apprentice" && <AppOnboarding />}
-      {screenSubmitted === "app-onboarding" && <AppOB2 />}
+      {screenSubmitted === "apprentice" && (
+        <AppOnboarding userSubmitted={setScreenSubmitted} />
+      )}
+      {screenSubmitted === "app-onboarding" && (
+        <AppOB2 userSubmitted={setScreenSubmitted} />
+      )}
     </>
   );
 }

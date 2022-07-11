@@ -23,11 +23,15 @@
   gap: 10px;
 }
 
-.f1 {
+.appf1 {
   /* Already have an account? Log In */
   line-height: 3;
   text-align: center;
 
   color: #334e68;
   color: #334e68;
+}
+
+.appsub-header {
+  position: initial;
 }

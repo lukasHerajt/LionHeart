@@ -27,10 +27,15 @@ const styles = {
   },
 };
 
-function AppOnboarding({ classes, props }) {
+function AppOnboarding({ classes, props, userSubmitted }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password2, setpassword2] = useState("");
+
+  const appSignup = (event) => {
+    event.preventDefault(); // TODO: lookupmeaning
+    userSubmitted("app-onboarding");
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -41,8 +46,8 @@ function AppOnboarding({ classes, props }) {
     <div className={classes.root}>
       <img className="Logo" src={logo} alt="Logo" />
       <div className="body">
-        <header className="header">
-          <h2>Create Apprentice Account</h2>
+        <header className="appsub-header">
+          <h3>Create Apprentice Account</h3>
         </header>
         <div className="form" onSubmit={handleSubmit}>
           <TextField
@@ -64,11 +69,11 @@ function AppOnboarding({ classes, props }) {
             variant="outlined"
             onChange={(e) => setpassword2(e.target.value)}
           />
-          <Button variant="contained" color="primary">
+          <Button onClick={appSignup} variant="contained" color="primary">
             Create Account
           </Button>
         </div>
-        <footer className="f1">
+        <footer className="appf1">
           <div>
             Already have an account?
             <span>
