@@ -1,0 +1,17 @@
+.appheader {
+  top: 50px;
+}
+.checkbox {
+  align-items: center;
+  display: flex;
+}
+.subheader {
+  font-style: italic;
+}
+.f1 {
+  position: absolute;
+  top: 450px;
+}
+.addSkills {
+  position: absolute;
+}
