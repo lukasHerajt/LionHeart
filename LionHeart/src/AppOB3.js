@@ -10,7 +10,7 @@ import Circle from "@material-ui/icons/FiberManualRecord";
 import IconButton from "@material-ui/core/IconButton";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import ArrowCircleRightTwoToneIcon from "@mui/icons-material/ArrowCircleRight";
-import AddIcon from "@mui/icons-material/Add";
+// import AddIcon from "@mui/icons-material/Add";
 import logo from "./logo.png";
 import "./AppOB3";
 import "./AppOB3.css";
@@ -39,11 +39,11 @@ const styles = {
         fill: "#D9DBE9",
       },
     },
-    "& .MuiSvgIcon-colorPrimary": {
+    "& .MuiSvgIcon-fontSizeLarge": {
       fill: "#A7B5F9",
       fontSize: "60px",
       position: "absolute",
-      top: "250px",
+      top: "170px",
     },
     "& .MuiCheckbox-colorSecondary.Mui-checked": {
       "& svg": {
@@ -51,8 +51,8 @@ const styles = {
       },
     },
     "& .MuiTextField-root": {
-      position: "absolute",
-      top: "480px",
+      position: "relative",
+      top: "85px",
     },
   },
 };
@@ -112,9 +112,9 @@ function AppOB3({ classes, userSubmitted }) {
               </div>
             );
           })}
-          {/* <footer className="f1">
+          <footer className="f2">
             <f1>Don't see you skills? Type them here! </f1>
-          </footer> */}
+          </footer>
           <TextField
             size="small"
             label="Enter you skill"
@@ -127,7 +127,7 @@ function AppOB3({ classes, userSubmitted }) {
             color="primary"
             fontSize="small"
           ></Button> */}
-          <IconButton onClick={appSignup}>
+          <IconButton className="nxtpage" onClick={appSignup}>
             <ArrowCircleRightTwoToneIcon color="primary" fontSize="large" />
           </IconButton>
         </body>
