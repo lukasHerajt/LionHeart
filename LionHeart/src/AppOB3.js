@@ -112,21 +112,21 @@ function AppOB3({ classes, userSubmitted }) {
               </div>
             );
           })}
-          <footer className="f1">
+          {/* <footer className="f1">
             <f1>Don't see you skills? Type them here! </f1>
-          </footer>
+          </footer> */}
           <TextField
             size="small"
             label="Enter you skill"
             className="addSkills"
           />{" "}
-          <Button
+          {/* <Button
             className="addbutton"
             startIcon={<AddIcon />}
             onClick="{}"
             color="primary"
             fontSize="small"
-          ></Button>
+          ></Button> */}
           <IconButton onClick={appSignup}>
             <ArrowCircleRightTwoToneIcon color="primary" fontSize="large" />
           </IconButton>
