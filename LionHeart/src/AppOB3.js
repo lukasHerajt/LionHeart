@@ -10,9 +10,8 @@ import Circle from "@material-ui/icons/FiberManualRecord";
 import IconButton from "@material-ui/core/IconButton";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import ArrowCircleRightTwoToneIcon from "@mui/icons-material/ArrowCircleRight";
-// import AddIcon from "@mui/icons-material/Add";
+import AddIcon from "@mui/icons-material/Add";
 import logo from "./logo.png";
-import "./AppOB3";
 import "./AppOB3.css";
 
 const styles = {
@@ -28,13 +27,9 @@ const styles = {
       padding: "10px",
     },
     "& .checkBox": {
-      color: "#A7B5F9",
+      // color: "#A7B5F9",
       position: "absolute",
       right: "0",
-
-      "&:hover": {
-        backgroundColor: "rgba(167, 181, 249, 0.25)",
-      },
       "& svg": {
         fill: "#D9DBE9",
       },
@@ -42,17 +37,55 @@ const styles = {
     "& .MuiSvgIcon-fontSizeLarge": {
       fill: "#A7B5F9",
       fontSize: "60px",
+    },
+    "& .MuiButtonBase-root MuiIconButton-root": {
+      fill: "#A7B5F9",
+      fontSize: "60px",
       position: "absolute",
       top: "170px",
+
+      "&:hover": {
+        backgroundColor: "rgb(167 181 249 / 20%)",
+      },
+    },
+    "& ..MuiIconButton-root:hover": {
+      fill: "#A7B5F9",
+      fontSize: "60px",
+      position: "absolute",
+      top: "170px",
+
+      "&:hover": {
+        backgroundColor: "rgb(167 181 249 / 20%)",
+      },
+    },
+    "& .MuiSvgIcon-colorPrimary": {
+      fill: "#A7B5F9",
+      fontSize: "60px",
     },
     "& .MuiCheckbox-colorSecondary.Mui-checked": {
       "& svg": {
         fill: "#A7B5F9",
       },
     },
-    "& .MuiTextField-root": {
+    "& #addButton": {
+      textAlign: "center",
+      top: "452px",
+      left: "280px",
+    },
+    "& .textBox": {
+      top: "16px",
+      width: "280px",
+    },
+    "& #nextBtn3": {
+      paddingTop: "36px",
+      textAlign: "center",
+    },
+    "& .addSkills": {
+      paddingTop: "26px",
+    },
+    "& .MuiFormControlLabel-label": {
       position: "relative",
-      top: "85px",
+      right: "26px",
     },
   },
 };
@@ -60,9 +93,8 @@ const styles = {
 function AppOB3({ classes, userSubmitted }) {
   const appSignup = (event) => {
     event.preventDefault(); // TODO: lookupmeaning
-    userSubmitted("app-onboarding");
+    userSubmitted("app-onboarding4");
   };
-  console.log("in app onboard 333");
   const back3 = (event) => {
     event.preventDefault();
     userSubmitted("back3");
@@ -81,7 +113,7 @@ function AppOB3({ classes, userSubmitted }) {
     <div className={classes.root}>
       <img className="Logo" src={logo} alt="Logo" />
       <Button
-        className="backbutton"
+        className="backButton"
         startIcon={<ArrowBackIcon />}
         onClick={back3}
         color="primary"
@@ -112,24 +144,28 @@ function AppOB3({ classes, userSubmitted }) {
               </div>
             );
           })}
-          <footer className="f2">
-            <f1>Don't see you skills? Type them here! </f1>
-          </footer>
-          <TextField
-            size="small"
-            label="Enter you skill"
-            className="addSkills"
-          />{" "}
-          {/* <Button
-            className="addbutton"
-            startIcon={<AddIcon />}
-            onClick="{}"
-            color="primary"
-            fontSize="small"
-          ></Button> */}
-          <IconButton className="nxtpage" onClick={appSignup}>
-            <ArrowCircleRightTwoToneIcon color="primary" fontSize="large" />
-          </IconButton>
+          <div>
+            <div className="addSkills">
+              Don't see your skills? Type them here!
+            </div>
+            <TextField
+              size="small"
+              label="Enter your skill"
+              className="textBox"
+            />
+            <Button
+              id="addButton"
+              startIcon={<AddIcon />}
+              onClick="{}"
+              color="primary"
+              fontSize="small"
+            ></Button>
+          </div>
+          <div id="nextBtn3">
+            <IconButton onClick={appSignup}>
+              <ArrowCircleRightTwoToneIcon color="primary" fontSize="large" />
+            </IconButton>
+          </div>
         </body>
       </div>
     </div>

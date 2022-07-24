@@ -29,6 +29,11 @@ const styles = {
       fontSize: "60px",
     },
 
+    "& #nxtbtn2": {
+      textAlign: "center",
+      paddingTop: "36px",
+    },
+
     "&:hover": {
       fill: "#4d68ee",
     },
@@ -38,7 +43,7 @@ const styles = {
 function AppOB2({ classes, userSubmitted }) {
   const appSignup = (event) => {
     event.preventDefault(); // TODO: lookupmeaning
-    userSubmitted("app-onboarding3");
+    userSubmitted("app-onboarding2");
   };
 
   const back2 = (event) => {
@@ -108,10 +113,12 @@ function AppOB2({ classes, userSubmitted }) {
                 <MenuItem value={30}>Pacific</MenuItem>
               </div>
             </Select>
+            <div id="nxtbtn2">
+              <IconButton onClick={appSignup}>
+                <ArrowCircleRightTwoToneIcon color="primary" fontSize="large" />
+              </IconButton>
+            </div>
           </FormControl>
-          <IconButton onClick={appSignup}>
-            <ArrowCircleRightTwoToneIcon color="primary" fontSize="large" />
-          </IconButton>
         </div>
       </div>
     </div>
