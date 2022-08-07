@@ -1,13 +1,14 @@
 // import react from "react";
 import { useState } from "react";
 // import { ReactDOM } from "react";
-// import "./App.css";
-// import StartScreen from "./startScreen";
-// import AppOnboarding from "./AppOnboarding";
-// import AppOB2 from "./AppOB2";
-// import AppOB3 from "./AppOB3";
-// import AppOB4 from "./AppOB4";
-import Navbar from "./Navbar";
+import "./App.css";
+import StartScreen from "./startScreen";
+import AppOnboarding from "./AppOnboarding";
+import AppOB2 from "./AppOB2";
+import AppOB3 from "./AppOB3";
+import AppOB4 from "./AppOB4";
+// import Navbar from "./Navbar";
+import AppHome from "./AppHome";
 
 function App() {
   const [screenSubmitted, setScreenSubmitted] = useState("");
@@ -15,7 +16,7 @@ function App() {
   console.log(screenSubmitted);
   return (
     <>
-      {/* {(screenSubmitted === "" || screenSubmitted === "back") && (
+      {(screenSubmitted === "" || screenSubmitted === "back") && (
         <StartScreen userSubmitted={setScreenSubmitted} />
       )}
 
@@ -35,8 +36,10 @@ function App() {
 
       {screenSubmitted === "app-onboarding4" && (
         <AppOB4 userSubmitted={setScreenSubmitted} />
-      )} */}
-      <Navbar />
+      )}
+      {screenSubmitted === "appHome" && (
+        <AppHome userSubmitted={setScreenSubmitted} />
+      )}
     </>
   );
 }

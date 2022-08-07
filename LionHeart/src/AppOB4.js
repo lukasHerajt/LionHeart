@@ -92,9 +92,9 @@ const styles = {
 };
 
 function AppOB4({ classes, userSubmitted }) {
-  const appSignup = (event) => {
+  const appHome = (event) => {
     event.preventDefault(); // TODO: lookupmeaning
-    userSubmitted("");
+    userSubmitted("appHome");
   };
   console.log("in app onboard 444");
   const back4 = (event) => {
@@ -181,7 +181,7 @@ function AppOB4({ classes, userSubmitted }) {
             </div>
           </div>
           <div id="nextBtn4">
-            <IconButton onClick={appSignup}>
+            <IconButton onClick={appHome}>
               <ArrowCircleRightTwoToneIcon color="primary" fontSize="large" />
             </IconButton>
           </div>

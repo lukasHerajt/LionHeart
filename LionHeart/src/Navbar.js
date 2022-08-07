@@ -15,18 +15,27 @@ const styles = {
       backgroundColor: "#ffffff",
       alignItems: "center",
     },
-
     "& .toolBar": {
       position: "fixed",
       bottom: "0px",
+      width: "100%",
     },
-
+    "& .toolBar button": {
+      width: "25%",
+    },
     "& .toolBar .MuiIconButton-label": {
       color: "#A7B5F9",
       display: "flex",
       flexDirection: "column",
-      padding: "0px 96px 0px 96px",
       fontSize: "medium",
+    },
+    "& .MuiIconButton-root": {
+      "&:hover": {
+        backgroundColor: "##ffffff00",
+      },
+      "&:focus": {
+        boxShadow: "#5b6cba 7px -41px 0px -32px",
+      },
     },
   },
 };
@@ -36,20 +45,20 @@ const Navbar = ({ classes }) => {
     <div className={classes.root}>
       <AppBar className="appBar">
         <Toolbar className="toolBar">
-          <IconButton>
-            <HomeRoundedIcon />
+          <IconButton disableRipple>
+            <HomeRoundedIcon disableRipple />
             <div>Home</div>
           </IconButton>
-          <IconButton>
-            <ExploreRoundedIcon />
+          <IconButton disableRipple>
+            <ExploreRoundedIcon disableRipple />
             <div>Explore</div>
           </IconButton>
-          <IconButton>
-            <ChatBubbleRoundedIcon />
+          <IconButton disableRipple>
+            <ChatBubbleRoundedIcon disableRipple />
             <div>Chat</div>
           </IconButton>
-          <IconButton>
-            <MenuRoundedIcon />
+          <IconButton disableRipple>
+            <MenuRoundedIcon disableRipple />
             <div>Menu</div>
           </IconButton>
         </Toolbar>

@@ -18,3 +18,8 @@
 .h2 {
   display: inline;
 }
+
+.users {
+  display: flex;
+  justify-content: space-evenly;
+}
