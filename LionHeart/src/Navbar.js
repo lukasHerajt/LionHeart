@@ -1,74 +1,86 @@
-import React from "react";
-import { withStyles } from "@mui/styles";
-import { IconButton } from "@material-ui/core";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
-import ExploreRoundedIcon from "@mui/icons-material/ExploreRounded";
-import ChatBubbleRoundedIcon from "@mui/icons-material/ChatBubbleRounded";
-import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import React from 'react'
+import { Outlet, useNavigate } from 'react-router-dom'
+import { ReactComponent as HomeIcon } from './icons/HomeIcon.svg'
+import { ReactComponent as HomeIconActive } from './icons/HomeActiveIcon.svg'
+import { ReactComponent as ChatIcon } from './icons/ChatIcon.svg'
+import { ReactComponent as ChatIconActive } from './icons/ChatActiveIcon.svg'
+import { ReactComponent as TeamIcon } from './icons/TeamIcon.svg'
+import { ReactComponent as TeamIconActive } from './icons/TeamActiveIcon.svg'
+import { ReactComponent as MenuIcon } from './icons/MenuIcon.svg'
 
-const styles = {
-  root: {
-    "& .appBar": {
-      position: "fixed",
-      backgroundColor: "#ffffff",
-      alignItems: "center",
-    },
-    "& .toolBar": {
-      position: "fixed",
-      bottom: "0px",
-      width: "100%",
-    },
-    "& .toolBar button": {
-      width: "25%",
-    },
-    "& .toolBar .MuiIconButton-label": {
-      color: "#A7B5F9",
-      display: "flex",
-      flexDirection: "column",
-      fontSize: "medium",
-    },
-    "& .MuiIconButton-root": {
-      "&:hover": {
-        backgroundColor: "##ffffff00",
-      },
-      "&:focus": {
-        boxShadow: "#5b6cba 7px -41px 0px -32px",
-      },
-    },
-  },
-};
 
-const Navbar = ({ classes, userSubmitted }) => {
-  const appSignup = (event) => {
-    event.preventDefault(); // TODO: lookupmeaning
-    userSubmitted("apprentice");
-  };
-  return (
-    <div className={classes.root}>
-      <AppBar className="appBar">
-        <Toolbar className="toolBar">
-          <IconButton disableRipple>
-            <HomeRoundedIcon disableRipple />
-            <div>Home</div>
-          </IconButton>
-          <IconButton disableRipple>
-            <ExploreRoundedIcon disableRipple onClick={appSignup} />
-            <div>Explore</div>
-          </IconButton>
-          <IconButton disableRipple>
-            <ChatBubbleRoundedIcon disableRipple />
-            <div>Chat</div>
-          </IconButton>
-          <IconButton disableRipple>
-            <MenuRoundedIcon disableRipple />
-            <div>Menu</div>
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
-};
+export default function Navbar() {
+    const navigate = useNavigate()
+    const [active, setActive] = React.useState(0)
+    const width = window.innerWidth
+    console.log('width: ', width)
+    return (
+        <>
 
-export default withStyles(styles)(Navbar);
+            {width > 500 ? <div className="nav-div-top" /> : <div className="nav-div-bottom" />}
+            <div className={`${(width > 500) ? 'top' : 'bottom'} navbar`}>
+
+                {active === 0 ? <HomeIconActive
+                    className='first active'
+                    onClick={() => {
+                        console.log('home clicked')
+                        navigate('/Company')
+                    }}
+
+                />
+                    :
+                    <HomeIcon
+                        className='first'
+                        onClick={() => {
+                            setActive(0)
+                            console.log('home clicked')
+                            navigate('/Company')
+                        }}
+                    />}
+
+                {active === 1 ? <ChatIconActive
+                    className='second active'
+                    onClick={() => {
+                        setActive(1)
+                        console.log('home clicked')
+                        navigate('/Chat')
+                    }}
+
+                />
+                    :
+                    <ChatIcon
+                        className='second'
+
+
+                        onClick={() => {
+                            setActive(1)
+                            console.log('chat clicked')
+                            navigate('/Chat')
+                            console.log('active: ', active)
+                        }}
+                    />}
+                {active === 2 ? <TeamIconActive
+                    className='third active'
+                    onClick={() => {
+                        setActive(2)
+                        console.log('home clicked')
+                        navigate('/Team')
+                    }}
+
+                />
+                    :
+                    <TeamIcon
+                        className='third'
+
+                        onClick={() => {
+                            setActive(2)
+                            console.log('home clicked')
+                            navigate('/Team')
+                        }}
+                    />}
+                <MenuIcon className='fourth' />
+                <Outlet />
+            </div>
+        </>
+    )
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import { withStyles } from "@mui/styles";
-import Navbar from "./Navbar";
+import NavbarMUI from "./NavbarMUI";
 import "./AppHome.css";
 import { Button } from "@mui/material";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -103,7 +103,7 @@ const AppHome = ({ classes, userSubmitted }) => {
         </div> */}
       </div>
       <div>
-        <Navbar />
+        <NavbarMUI />
       </div>
     </div>
     // </div>
