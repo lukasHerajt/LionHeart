@@ -40,7 +40,11 @@ const styles = {
   },
 };
 
-const Navbar = ({ classes }) => {
+const Navbar = ({ classes, userSubmitted }) => {
+  const appSignup = (event) => {
+    event.preventDefault(); // TODO: lookupmeaning
+    userSubmitted("apprentice");
+  };
   return (
     <div className={classes.root}>
       <AppBar className="appBar">
@@ -50,7 +54,7 @@ const Navbar = ({ classes }) => {
             <div>Home</div>
           </IconButton>
           <IconButton disableRipple>
-            <ExploreRoundedIcon disableRipple />
+            <ExploreRoundedIcon disableRipple onClick={appSignup} />
             <div>Explore</div>
           </IconButton>
           <IconButton disableRipple>

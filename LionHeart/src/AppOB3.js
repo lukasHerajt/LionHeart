@@ -30,6 +30,11 @@ const styles = {
       // color: "#A7B5F9",
       position: "absolute",
       right: "0",
+
+      "&:hover": {
+        backgroundColor: "rgba(167, 181, 249, 0.25)",
+      },
+
       "& svg": {
         fill: "#D9DBE9",
       },
@@ -87,6 +92,9 @@ const styles = {
       position: "relative",
       right: "26px",
     },
+    "& .MuiIconButton-root": {
+      padding: "0px",
+    },
   },
 };
 
@@ -134,6 +142,7 @@ function AppOB3({ classes, userSubmitted }) {
                   labelPlacement="start"
                   control={
                     <Checkbox
+                      disableRipple
                       className="checkBox"
                       icon={<Circle fontSize="medium" />}
                       checkedIcon={<CircleCheckedFilled className="checkBox" />}
@@ -154,6 +163,7 @@ function AppOB3({ classes, userSubmitted }) {
               className="textBox"
             />
             <Button
+              disableRipple
               id="addButton"
               startIcon={<AddIcon />}
               onClick="{}"
@@ -162,7 +172,7 @@ function AppOB3({ classes, userSubmitted }) {
             ></Button>
           </div>
           <div id="nextBtn3">
-            <IconButton onClick={appSignup}>
+            <IconButton disableRipple onClick={appSignup}>
               <ArrowCircleRightTwoToneIcon color="primary" fontSize="large" />
             </IconButton>
           </div>

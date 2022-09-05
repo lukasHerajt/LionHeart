@@ -55,6 +55,7 @@ function AppOB2({ classes, userSubmitted }) {
     <div className={classes.root}>
       <img className="Logo" src={logo} alt="Logo" />
       <Button
+        disableRipple
         className="backbutton"
         startIcon={<ArrowBackIcon />}
         onClick={back2}
@@ -114,7 +115,7 @@ function AppOB2({ classes, userSubmitted }) {
               </div>
             </Select>
             <div id="nxtbtn2">
-              <IconButton onClick={appSignup}>
+              <IconButton disableRipple onClick={appSignup}>
                 <ArrowCircleRightTwoToneIcon color="primary" fontSize="large" />
               </IconButton>
             </div>

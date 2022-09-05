@@ -3,6 +3,7 @@ import { withStyles } from "@mui/styles";
 import Navbar from "./Navbar";
 import "./AppHome.css";
 import { Button } from "@mui/material";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const styles = {
   root: {
@@ -69,7 +70,17 @@ const AppHome = ({ classes, userSubmitted }) => {
         <Button disableRipple variant="text" color="secondary">
           Post Sessions
         </Button>
-        <div className="box">
+        <div class=" box position-absolute top-50 start-50 translate-middle">
+          <div class="card-header">Monday, Februrary 14th</div>
+          <div class="card-body">
+            <h5 class="card-title">2:30 pm - 3:30 pm</h5>
+            <p class="card-text">Fogg’s Behavioral Model for UX/UI</p>
+            <a href="#" class="btn btn-primary">
+              Go somewhere
+            </a>
+          </div>
+        </div>
+        {/* <div className="box">
           <p>Monday, Februrary 14th</p>
           <p>2:30 pm - 3:30 pm</p>
           <h4>Fogg’s Behavioral Model for UX/UI</h4>
@@ -80,22 +91,22 @@ const AppHome = ({ classes, userSubmitted }) => {
             <div>
               <p>Hosted by:</p>
             </div>
-          </div>
-          <div className="ButtonText">
-            <Button
-              onClick={appSignup}
-              className="ButtonText"
-              variant="contained"
-            >
-              <div>Veiw Session</div>
-            </Button>
-          </div>
-        </div>
-        <div>
-          <Navbar />
-        </div>
+          </div> */}
+        {/* <div className="ButtonText">
+          <Button
+            onClick={appSignup}
+            className="ButtonText"
+            variant="contained"
+          >
+            <div>Veiw Session</div>
+          </Button>
+        </div> */}
+      </div>
+      <div>
+        <Navbar />
       </div>
     </div>
+    // </div>
     // </meta>
   );
 };

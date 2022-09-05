@@ -88,6 +88,9 @@ const styles = {
       width: "95px",
       height: "95px",
     },
+    "& .MuiIconButton-root": {
+      padding: "0px",
+    },
   },
 };
 
@@ -136,6 +139,7 @@ function AppOB4({ classes, userSubmitted }) {
                     labelPlacement="start"
                     control={
                       <Checkbox
+                        disableRipples
                         className="checkBox"
                         icon={<Circle fontSize="medium" />}
                         checkedIcon={
